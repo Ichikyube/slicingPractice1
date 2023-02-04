@@ -1,0 +1,94 @@
+// Front-end Style Guide
+
+/* Layout
+$Mobile: 375px
+$Desktop: 1440px
+
+/* Colors
+// Primary
+$LightCyan: hsl(193, 38%, 86%)
+$NeonGreen: hsl(150, 100%, 66%)
+// Neutral
+$GrayishBlue: hsl(217, 19%, 38%)
+$DarkGrayishBlue: hsl(217, 19%, 24%)
+$DarkBlue: hsl(218, 23%, 16%)
+
+/* Typography
+// Body Copy
+$FontSize: 28px
+// Font
+@font-face 
+    // This is parsed as a normal function call that takes a quoted string.
+    src: url(https://fonts.google.com/specimen/Manrope)
+    font-family: "Manrope"
+    font-weight: 800
+
+body
+    background: $DarkBlue
+
+.card
+    $max: calc(100 / 3)
+    position: fixed
+    top: 50vh - calc($max/2)
+    left: 50vw - calc($max/2)
+    color: $LightCyan
+    background: $DarkGrayishBlue
+    max-width: $max *1vw
+    border-radius: 10px
+    margin-inline: auto
+    text-align: center
+    box-shadow: 5px 5px 1rem 3px rgba(0, 0, 0, 0.25)
+    .card-title
+        color: $NeonGreen
+        font-size: 1rem
+        line-height: 1.5rem
+    .card-body
+        position: relative
+        margin-bottom: 2rem
+        .divider
+            position: relative
+            img
+                display: inline-flex
+                justify-self: center
+                position: absolute
+                width: -webkit-fill-available
+                top: 50%
+                left:0
+    div
+        padding: 1rem
+    hr
+        margin: 2rem
+        height: 1px
+        overflow: visible
+        padding: 0
+        border: none
+        border-top: 1px solid $GrayishBlue
+        text-align: center
+        position: relative
+
+.circle
+    $radius: 1.5rem
+    width: $radius
+    height: $radius
+    border-radius: 50%
+    bottom: -$radius - 2.5rem
+    left: 50%
+    margin-left: -$radius
+    display: inline-flex
+    position: absolute
+    box-shadow: 0 0 2rem $NeonGreen
+    animation: pulse 2s ease-in-out infinite
+
+    &:after
+        content: url('images/icon-dice.svg')
+        height: 25%
+        width: 25%
+
+@keyframes pulse 
+    0%, 100% 
+        background:'transparent'
+        box-shadow: 0 0 0rem $NeonGreen
+    50% 
+        background: $NeonGreen
+        box-shadow: 0 0 2rem $NeonGreen
+    
